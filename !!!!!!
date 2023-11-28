@@ -1,0 +1,27 @@
+shift option f (clean up code)
+
+cmd k c (comment out code)
+
+    <!-- nav>ul>li of ol ipv ul // child: > -->
+    <nav>
+        <ul>
+            <li></li>
+        </ul>
+    </nav>
+
+    <!-- ul>li*4 // multi: * -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>ß
+    </ul>
+
+    <!-- div>(header>ul>li*2>a)+footer>p -->
+    <div>
+        <header>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </header>
