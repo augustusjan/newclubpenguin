@@ -157,6 +157,7 @@ footer a:hover {
 
 #top {
   display: flex;
+  margin-bottom: 2rem;
 }
 
 #content {
@@ -184,6 +185,7 @@ footer a:hover {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 .klein {
