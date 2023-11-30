@@ -190,12 +190,12 @@ footer a:hover {
 .foto {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
+  margin: 1rem;
+  flex-wrap: nowrap;
 }
 
 .klein {
-  max-width: 10%;
+  max-width: 15%;
   height: auto;
   margin-bottom: 1rem;
 }
