@@ -51,6 +51,7 @@ nav {
 }
 
 nav ul {
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -135,7 +136,7 @@ ul {
 
 img {
   display: block;
-  margin: 1.5rem;
+  margin: 1rem;
   object-fit: contain;
 }
 
