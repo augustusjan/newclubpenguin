@@ -18,12 +18,12 @@ header {
 
 header h1 {
   margin: 1rem auto;
-  width: 85vw;
+  width: 90vw;
 }
 
 main {
   background-color: #FBFDFB;
-  width: 85vw;
+  width: 90vw;
 }
 
 header,
@@ -116,7 +116,6 @@ h3 {
 
 p {
   font-size: 1rem;
-  margin-right: 2.5rem;
 }
 
 
@@ -136,16 +135,18 @@ ul {
 
 img {
   display: block;
+  margin: 1.5rem;
   object-fit: contain;
 }
 
 a {
-  color: #15159C;
-
+  color: rgb(13, 150, 243);
+  text-decoration: none;
 }
 
 a:hover {
-  color: #FBCB3F;
+  color: rgb(21, 21, 156);
+  text-decoration: underline;
 }
 
 footer p,
@@ -167,15 +168,26 @@ footer a:hover {
 }
 
 #content {
-  margin-left: 2rem;
+  color: white;
+  display: inline-block;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 5px;
+  background-color: rgb(13, 150, 243);
+  box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
+  0px 11px 100px -13px rgba(255, 255, 255, 0.6);
 }
 
 #content li {
-  line-height: 1.5rem;
+  line-height: 1rem;
+  margin-left: 1rem;
 }
 
 #content a {
-  color: black;
+  color: white;
+  display: flex;
+  border-radius: 5px;
+  padding: 0.4rem;
   text-decoration: none;
   transition-duration: 0.3s;
   transition-property: background-color, padding;
@@ -183,14 +195,18 @@ footer a:hover {
 }
 
 #content a:hover {
-  background-color: #FBCB3F;
+  color: #FBCB3F;
+  text-decoration: underline;
+  background-color: rgb(13, 150, 243);
+  box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
+    0px 11px 100px -13px rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
   padding: 0.4rem;
 }
 
 .foto {
   display: flex;
   justify-content: space-evenly;
-  margin: 1rem;
   flex-wrap: nowrap;
 }
 
@@ -211,5 +227,5 @@ footer a:hover {
 }
 
 .text {
-  color: red;
+ display: block;
 }
