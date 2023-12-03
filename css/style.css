@@ -116,7 +116,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 p {
@@ -141,7 +141,7 @@ ul {
 main img {
   display: block;
   object-fit: contain;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 a {
@@ -212,11 +212,12 @@ footer a:hover {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .klein {
-  max-width: 15%;
+  min-width: 8rem;
+  max-width: 10rem;
   height: auto;
   margin-bottom: 1rem;
 }
