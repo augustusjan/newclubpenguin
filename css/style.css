@@ -42,6 +42,7 @@ footer {
 
 footer {
   background-color: rgb(13, 150, 243);
+  /* boxshadow te krijgen op de manier dat ik wilde. bron: https://box-shadow.dev/ */
   box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
     0px 11px 100px -13px rgba(255, 255, 255, 0.6);
 }
@@ -76,14 +77,14 @@ nav a {
   padding: 1rem;
   text-decoration: none;
   border-radius: 5px;
-  color: white;
+  color: rgb(255, 255, 255);
   transition-property: padding, background-color, color, box-shadow;
   transition-duration: 0.2s;
   transition-timing-function: linear;
 }
 
 nav a:hover {
-  color: #fbcb3f;
+  color: rgb(251, 203, 63);
   background-color: rgb(13, 150, 243);
   box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
     0px 11px 100px -13px rgba(255, 255, 255, 0.6);
@@ -96,6 +97,19 @@ nav img {
   display: inline;
   height: 50px;
   margin: 0.5rem 1rem;
+}
+
+section {
+  margin: 1rem 0;
+  padding-top: 1rem;
+}
+
+section p {
+  margin: 0;
+}
+
+section:last-child {
+  margin-bottom: 2rem;
 }
 
 h1,
@@ -139,8 +153,8 @@ main img {
   min-width: 8rem;
   max-width: 10rem;
   height: auto;
-  margin-bottom: 1rem;
 }
+
 
 a {
   color: rgb(13, 150, 243);
@@ -156,25 +170,25 @@ footer p,
 footer a {
   display: flex;
   justify-content: center;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 2rem;
 }
 
 
 footer a:hover {
-  color: #FBCB3F;
+  color: rgb(251, 203, 63);
 }
 
 #top {
   display: flex;
+  margin-bottom: 1rem;
 }
 
 #content {
-  color: white;
+  color: rgb(255, 255, 255);
   display: inline-block;
   padding: 1rem;
-  margin-left: 2rem;
-  margin-bottom: 2rem;
+  margin: 0 2rem;
   border-radius: 5px;
   background-color: rgb(13, 150, 243);
   box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
@@ -187,7 +201,7 @@ footer a:hover {
 }
 
 #content a {
-  color: white;
+  color: rgb(255, 255, 255);
   display: flex;
   border-radius: 5px;
   padding: 0.4rem;
@@ -198,7 +212,7 @@ footer a:hover {
 }
 
 #content a:hover {
-  color: #FBCB3F;
+  color: rgb(251, 203, 63);
   text-decoration: underline;
   background-color: rgb(13, 150, 243);
   box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
@@ -217,7 +231,6 @@ footer a:hover {
 .groot {
   max-width: 100%;
   height: auto;
-  margin-bottom: 1rem;
 }
 
 .lijst {
@@ -231,14 +244,8 @@ footer a:hover {
   }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
-  body {
-    background-color: rgb(216, 243, 255);
-  }
-}
-
 @media (min-width: 1024px) {
   .groot {
-    max-width: 70%;
+    max-width: 55%;
   }
 }
