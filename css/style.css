@@ -1,3 +1,4 @@
+/* hier begint de css voor algemeen */
 *,
 html {
   margin: 0;
@@ -12,6 +13,7 @@ html {
   height: 100%;
 }
 
+/* bron voor overscroll-behavior: https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior */
 body {
   width: 100%;
   margin: 0;
@@ -21,6 +23,14 @@ body {
   overscroll-behavior: none;
 }
 
+header,
+main,
+footer {
+  margin: 0 auto;
+}
+
+
+/* hier begint de css voor de header */
 header {
   min-height: 80px;
 }
@@ -30,23 +40,7 @@ header h1 {
   width: 90vw;
 }
 
-main {
-  width: 90vw;
-}
-
-header,
-main,
-footer {
-  margin: 0 auto;
-}
-
-footer {
-  background-color: rgb(13, 150, 243);
-  /* boxshadow te krijgen op de manier dat ik wilde. bron: https://box-shadow.dev/ */
-  box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
-    0px 11px 100px -13px rgba(255, 255, 255, 0.6);
-}
-
+/* hier begint de css voor de header */
 nav {
   margin-bottom: 2rem;
   flex-wrap: wrap;
@@ -99,17 +93,9 @@ nav img {
   margin: 0.5rem 1rem;
 }
 
-section {
-  margin: 1rem 0;
-  padding-top: 1rem;
-}
-
-section p {
-  margin: 1rem 0;
-}
-
-section:last-child {
-  margin-bottom: 2rem;
+/* hier begint de css voor de main */
+main {
+  width: 90vw;
 }
 
 h1,
@@ -122,6 +108,7 @@ p {
 h1 {
   font-weight: bold;
   font-size: 1.8rem;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -137,24 +124,44 @@ p {
   line-height: 1.5rem;
 }
 
-strong {
+abbr {
   color: rgb(21, 21, 156);
+  font-style: italic;
 }
+
 
 ul {
   margin-left: 2rem;
   line-height: 1.4rem;
 }
 
+section {
+  margin: 1rem 0;
+  padding-top: 1rem;
+}
+
+section p {
+  margin: 1rem 0;
+}
+
+main section:last-child {
+  margin-bottom: 2rem;
+}
+
 main img {
-  display: block;
   object-fit: contain;
+  margin: 0 auto;
   padding: 1rem;
   min-width: 8rem;
   max-width: 10rem;
   height: auto;
 }
 
+video {
+margin: 0 auto;
+  width: 90vw;
+
+}
 
 a {
   color: rgb(13, 150, 243);
@@ -164,19 +171,6 @@ a {
 a:hover {
   color: rgb(21, 21, 156);
   text-decoration: underline;
-}
-
-footer p,
-footer a {
-  display: flex;
-  justify-content: center;
-  color: rgb(255, 255, 255);
-  padding: 2rem;
-}
-
-
-footer a:hover {
-  color: rgb(251, 203, 63);
 }
 
 #top {
@@ -214,11 +208,9 @@ footer a:hover {
 #content a:hover {
   color: rgb(251, 203, 63);
   text-decoration: underline;
-  background-color: rgb(13, 150, 243);
   box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
     0px 11px 100px -13px rgba(255, 255, 255, 0.6);
   border-radius: 5px;
-  padding: 0.4rem;
 }
 
 .foto {
@@ -233,12 +225,53 @@ footer a:hover {
   height: auto;
 }
 
-.lijst {
-  margin-bottom: 2rem;
+/* hier begint de css voor de footer */
+footer {
+  background-color: rgb(13, 150, 243);
+  /* boxshadow te krijgen op de manier dat ik wilde. bron: https://box-shadow.dev/ */
+  box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
+    0px 11px 100px -13px rgba(255, 255, 255, 0.6);
 }
 
-@media (min-width: 1024px) {
+footer p,
+footer a {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  padding: 2rem;
+}
+
+footer a:hover {
+  color: rgb(251, 203, 63);
+}
+
+/* hier begint de css voor media queries */
+/* @media (min-width: 1324px) {
   .groot {
-    max-width: 55%;
+    max-width: 45vw;
+  }
+
+  video {
+    display: flex;
+    justify-content: center;
+    max-width: 65%;
+  }
+} */
+
+@media (max-width:600px) {
+  h1 {
+    animation: blackandyellow 2s linear 2;
+  }
+
+  @keyframes blackandyellow {
+    0% {
+      color: rgb(0, 0, 0)
+    }
+    50% {
+      color: rgb(251, 203, 63);
+    }
+    100% {
+      color: rgb(0, 0, 0)
+    }
   }
 }
