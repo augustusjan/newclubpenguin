@@ -246,17 +246,14 @@ footer a:hover {
 }
 
 /* hier begint de css voor media queries */
-/* @media (min-width: 1324px) {
-  .groot {
-    max-width: 45vw;
-  }
-
+@media (min-width:900px) and (max-width: 1024px) {
   video {
     display: flex;
     justify-content: center;
-    max-width: 65%;
+    max-width: 90%;
   }
-} */
+  }
+
 
 @media (max-width:600px) {
   h1 {
@@ -273,5 +270,17 @@ footer a:hover {
     100% {
       color: rgb(0, 0, 0)
     }
+  }
+}
+
+@media (min-width: 1024px) {
+  .groot {
+    max-width: 45vw;
+  }
+
+  video {
+    display: flex;
+    justify-content: center;
+    max-width: 75%;
   }
 }
