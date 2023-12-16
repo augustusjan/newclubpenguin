@@ -101,7 +101,7 @@ main section:first-of-type a {
   padding: 0.4rem;
 }
 
-nav a:hover,
+nav a:hover:nth-child(n+2),
 main section:first-of-type a:hover {
   color: #fbcb3f;
   background-color: #0d96f3;
