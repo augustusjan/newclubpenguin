@@ -29,7 +29,6 @@ footer {
   margin: 0 auto;
 }
 
-
 /* hier begint de css voor de header */
 header {
   min-height: 80px;
@@ -40,7 +39,7 @@ header h1 {
   width: 90vw;
 }
 
-/* hier begint de css voor de header */
+/* hier begint de css voor de navs */
 nav {
   margin-bottom: 2rem;
   flex-wrap: wrap;
@@ -88,9 +87,43 @@ nav a:hover {
 }
 
 nav img {
-  display: inline;
   height: 50px;
   margin: 0.5rem 1rem;
+}
+
+main section:first-of-type {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  padding: 1rem;
+  margin: 0 2rem;
+  border-radius: 5px;
+  background-color: rgb(13, 150, 243);
+  box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
+    0px 11px 100px -13px rgba(255, 255, 255, 0.6);
+}
+
+main section:first-of-type li {
+  line-height: 1rem;
+  margin-left: 1rem;
+}
+
+main section:first-of-type a {
+  color: rgb(255, 255, 255);
+  display: flex;
+  border-radius: 5px;
+  padding: 0.4rem;
+  text-decoration: none;
+  transition-duration: 0.3s;
+  transition-property: background-color, padding;
+  transition-timing-function: linear;
+}
+
+main section:first-of-type a:hover {
+  color: rgb(251, 203, 63);
+  text-decoration: underline;
+  box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
+    0px 11px 100px -13px rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
 }
 
 /* hier begint de css voor de main */
@@ -178,41 +211,6 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-#content {
-  color: rgb(255, 255, 255);
-  display: inline-block;
-  padding: 1rem;
-  margin: 0 2rem;
-  border-radius: 5px;
-  background-color: rgb(13, 150, 243);
-  box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
-    0px 11px 100px -13px rgba(255, 255, 255, 0.6);
-}
-
-#content li {
-  line-height: 1rem;
-  margin-left: 1rem;
-}
-
-#content a {
-  color: rgb(255, 255, 255);
-  display: flex;
-  border-radius: 5px;
-  padding: 0.4rem;
-  text-decoration: none;
-  transition-duration: 0.3s;
-  transition-property: background-color, padding;
-  transition-timing-function: linear;
-}
-
-#content a:hover {
-  color: rgb(251, 203, 63);
-  text-decoration: underline;
-  box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
-    0px 11px 100px -13px rgba(255, 255, 255, 0.6);
-  border-radius: 5px;
-}
-
 .foto {
   display: flex;
   justify-content: space-evenly;
@@ -254,10 +252,9 @@ footer a:hover {
   }
   }
 
-
 @media (max-width:600px) {
   h1 {
-    animation: blackandyellow 2s linear 2;
+    animation: blackandyellow 2s linear infinite;
   }
 
   @keyframes blackandyellow {
