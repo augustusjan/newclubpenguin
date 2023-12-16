@@ -1,9 +1,8 @@
-/* hier begint de css voor algemeen */
+/* hier begint de css voor algemeen en document */
 *,
 html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
 }
 
@@ -13,11 +12,12 @@ html {
   height: 100%;
 }
 
+/* hier begint de css voor de body */
 /* bron voor overscroll-behavior: https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior */
 body {
   width: 100%;
   margin: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   overflow: auto;
   height: 100%;
   overscroll-behavior: none;
@@ -41,15 +41,27 @@ header h1 {
 
 /* hier begint de css voor de navs */
 nav {
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
   flex-wrap: wrap;
   min-height: 100%;
   align-items: center;
   display: flex;
   justify-content: space-around;
-  background-color: rgb(13, 150, 243);
-  box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
+}
+
+nav,
+main section:first-of-type {
+  color: #fff;
+  background-color: #0d96f3;
+  box-shadow: inset 0px -40px 54px -15px #003cff,
     0px 11px 100px -13px rgba(255, 255, 255, 0.6);
+}
+
+main section:first-of-type {
+  display: inline-block;
+  padding: 1rem;
+  margin: 0 2rem;
+  border-radius: 5px;
 }
 
 nav ul {
@@ -65,24 +77,37 @@ nav li {
   margin: 1.5rem;
 }
 
-nav a {
-  margin: auto;
-  padding: 1rem;
-  text-decoration: none;
+main section:first-of-type li {
+  line-height: 1rem;
+  margin-left: 1rem;
+}
+
+nav a,
+main section:first-of-type a {
   border-radius: 5px;
-  color: rgb(255, 255, 255);
+  color: #fff;
   transition-property: padding, background-color, color, box-shadow;
   transition-duration: 0.2s;
   transition-timing-function: linear;
+  text-decoration: none;
 }
 
-nav a:hover {
-  color: rgb(251, 203, 63);
-  background-color: rgb(13, 150, 243);
-  box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
+nav a {
+  padding: 1rem;
+}
+
+main section:first-of-type a {
+  display: flex;
+  padding: 0.4rem;
+}
+
+nav a:hover,
+main section:first-of-type a:hover {
+  color: #fbcb3f;
+  background-color: #0d96f3;
+  box-shadow: inset 0px -40px 54px -15px #003cff,
     0px 11px 100px -13px rgba(255, 255, 255, 0.6);
   text-decoration: underline;
-  padding: 1rem;
   border-radius: 5px;
 }
 
@@ -91,51 +116,9 @@ nav img {
   margin: 0.5rem 1rem;
 }
 
-main section:first-of-type {
-  color: rgb(255, 255, 255);
-  display: inline-block;
-  padding: 1rem;
-  margin: 0 2rem;
-  border-radius: 5px;
-  background-color: rgb(13, 150, 243);
-  box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
-    0px 11px 100px -13px rgba(255, 255, 255, 0.6);
-}
-
-main section:first-of-type li {
-  line-height: 1rem;
-  margin-left: 1rem;
-}
-
-main section:first-of-type a {
-  color: rgb(255, 255, 255);
-  display: flex;
-  border-radius: 5px;
-  padding: 0.4rem;
-  text-decoration: none;
-  transition-duration: 0.3s;
-  transition-property: background-color, padding;
-  transition-timing-function: linear;
-}
-
-main section:first-of-type a:hover {
-  color: rgb(251, 203, 63);
-  text-decoration: underline;
-  box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
-    0px 11px 100px -13px rgba(255, 255, 255, 0.6);
-  border-radius: 5px;
-}
-
 /* hier begint de css voor de main */
 main {
   width: 90vw;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin-bottom: 1rem;
 }
 
 h1 {
@@ -157,11 +140,17 @@ p {
   line-height: 1.5rem;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin-bottom: 1rem;
+}
+
 abbr {
   color: rgb(21, 21, 156);
   font-style: italic;
 }
-
 
 ul {
   margin-left: 2rem;
@@ -191,13 +180,13 @@ main img {
 }
 
 video {
-margin: 0 auto;
+  margin: 0 auto;
   width: 90vw;
 
 }
 
 a {
-  color: rgb(13, 150, 243);
+  color: #0d96f3;
   text-decoration: none;
 }
 
@@ -225,9 +214,9 @@ a:hover {
 
 /* hier begint de css voor de footer */
 footer {
-  background-color: rgb(13, 150, 243);
+  background-color: #0d96f3;
   /* boxshadow te krijgen op de manier dat ik wilde. bron: https://box-shadow.dev/ */
-  box-shadow: inset 0px -40px 54px -15px rgb(0, 60, 255),
+  box-shadow: inset 0px -40px 54px -15px #003cff,
     0px 11px 100px -13px rgba(255, 255, 255, 0.6);
 }
 
@@ -235,12 +224,12 @@ footer p,
 footer a {
   display: flex;
   justify-content: center;
-  color: rgb(255, 255, 255);
+  color: #fff;
   padding: 2rem;
 }
 
 footer a:hover {
-  color: rgb(251, 203, 63);
+  color: #fbcb3f;
 }
 
 /* hier begint de css voor media queries */
@@ -250,22 +239,24 @@ footer a:hover {
     justify-content: center;
     max-width: 90%;
   }
-  }
+}
 
 @media (max-width:600px) {
   h1 {
-    animation: blackandyellow 2s linear infinite;
+    animation: blackandyellow 2s linear 2;
   }
 
   @keyframes blackandyellow {
     0% {
-      color: rgb(0, 0, 0)
+      color: #000
     }
+
     50% {
-      color: rgb(251, 203, 63);
+      color: #fbcb3f;
     }
+
     100% {
-      color: rgb(0, 0, 0)
+      color: #000
     }
   }
 }
