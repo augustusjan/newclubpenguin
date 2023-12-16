@@ -101,7 +101,7 @@ main section:first-of-type a {
   padding: 0.4rem;
 }
 
-nav a:hover:nth-child(n+2),
+nav ul a:hover,
 main section:first-of-type a:hover {
   color: #fbcb3f;
   background-color: #0d96f3;
@@ -112,8 +112,7 @@ main section:first-of-type a:hover {
 }
 
 nav img {
-  height: 50px;
-  margin: 0.5rem 1rem;
+  height: 45px;
 }
 
 /* hier begint de css voor de main */
